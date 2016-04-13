@@ -7,5 +7,5 @@ document()
 setwd("..")
 install("Glib")
 
-library(Glib)
+
 
