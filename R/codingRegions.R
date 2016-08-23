@@ -3,14 +3,10 @@
 #' This function extracts
 #' @param genes, a vctor list of hgnc gene names.
 #' @keywords Glib
-#' @export
 #' @import biomaRt
+#' @export
 #' @examples
 #' codingRegions()
-
-
-
-library(biomaRt)
 
 
 codingRegions <- function(genes) {
@@ -41,10 +37,6 @@ codingRegions <- function(genes) {
 }
 
 
-
-
-
-# sort exons into a list for each gene
 
 
 
