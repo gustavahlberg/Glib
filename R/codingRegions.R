@@ -11,8 +11,6 @@
 
 codingRegions <- function(genes) {
 
-  genes <- "SCN5A"
-
   mart <- useMart(biomart="ENSEMBL_MART_ENSEMBL", host="grch37.ensembl.org", path="/biomart/martservice", dataset="hsapiens_gene_ensembl")
 
   P <- getBM(mart ,attributes = c("ensembl_peptide_id","ensembl_gene_id","ensembl_transcript_id", "hgnc_symbol"),
