@@ -19,12 +19,12 @@ mafFilter <- function(Y,maf,LOW=TRUE){
     }
 
     if (LOW == TRUE) {
-      sum(d <= maf) >= 1
+      return(sum(d <= maf) >= 1)
     }
 
     if (LOW == FALSE) {
-      sum(d > maf) >= 1
+      return(sum(d > maf) >= 1)
     }
   })
-  which(res)
+  return(which(res))
 }
