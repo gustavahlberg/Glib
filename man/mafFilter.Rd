@@ -17,4 +17,3 @@ if LOW is set to TRUE and a indexlist if LOW is FALSE
 mafFilter()
 }
 \keyword{Glib}
-

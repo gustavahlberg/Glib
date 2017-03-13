@@ -17,7 +17,7 @@ codingRegions <- function(genes) {
              filters = "hgnc_symbol",values = genes)
   canon <- getBM(mart , attributes = c("hsapiens_paralog_canonical_transcript_protein"), filters = c("hgnc_symbol"),values = genes)
   exons <- getBM(mart, attributes = c("ensembl_gene_id", "ensembl_exon_id","ensembl_transcript_id", "chromosome_name",
-                                      "exon_chrom_start", "exon_chrom_end", "strand"), filters = "hgnc_symbol", values = genes)
+                                      "genomic_coding_start", "genomic_coding_end", "strand"), filters = "hgnc_symbol", values = genes)
 
   idxCan <- which(P$ensembl_peptide_id %in% canon[[1]])
   CanTrans <- P[idxCan,c(3,4)]
@@ -34,7 +34,7 @@ codingRegions <- function(genes) {
   for (i in 1:nrow(exons))
     suppressWarnings(exons$hgnc_symbol[i] <- P$hgnc_symbol[ P$ensembl_gene_id ==  exons$ensembl_gene_id[i] ])
 
-  resExons <- exons[exons$ensembl_transcript_id %in% CanTrans,c("chromosome_name","exon_chrom_start","exon_chrom_end","hgnc_symbol")]
+  resExons <- exons[exons$ensembl_transcript_id %in% CanTrans,c("chromosome_name","genomic_coding_start","genomic_coding_start","hgnc_symbol")]
   return(resExons)
 }
 

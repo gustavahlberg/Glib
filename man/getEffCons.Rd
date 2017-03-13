@@ -21,4 +21,3 @@ getEffCons(info(vcf)$EFF, cons)
 getEffCons()
 }
 \keyword{Glib}
-

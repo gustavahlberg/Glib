@@ -16,4 +16,3 @@ This function extracts
 ggdQqplot()
 }
 \keyword{Glib}
-

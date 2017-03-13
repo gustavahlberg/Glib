@@ -16,4 +16,3 @@ This function allows you chenage variable names to a string
 varToChar()
 }
 \keyword{Glib}
-

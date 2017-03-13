@@ -16,4 +16,3 @@ This function extracts
 varToChar()
 }
 \keyword{Glib}
-

@@ -16,4 +16,3 @@ This function extracts
 codingRegions()
 }
 \keyword{Glib}
-
