@@ -34,7 +34,7 @@ codingRegions <- function(genes) {
   for (i in 1:nrow(exons))
     suppressWarnings(exons$hgnc_symbol[i] <- P$hgnc_symbol[ P$ensembl_gene_id ==  exons$ensembl_gene_id[i] ])
 
-  resExons <- exons[exons$ensembl_transcript_id %in% CanTrans,c("chromosome_name","genomic_coding_start","genomic_coding_start","hgnc_symbol")]
+  resExons <- exons[exons$ensembl_transcript_id %in% CanTrans,c("chromosome_name","genomic_coding_start","genomic_coding_end","hgnc_symbol")]
   return(resExons)
 }
 
